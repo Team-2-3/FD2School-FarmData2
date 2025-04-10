@@ -8,10 +8,14 @@ describe("Testing Transplanting Report Default Values", () => {
     })
 
     it("Checking if page is correct", () => {
-
+        cy.get('[data-cy=transplant-report-header]')
     })
 
     it("Testing default values", () => {
 
+    })
+
+    it("Checking Button and if the report is not visible.", () => {
+        
     })
 })
