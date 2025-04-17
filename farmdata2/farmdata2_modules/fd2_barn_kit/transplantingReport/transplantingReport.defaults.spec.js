@@ -32,11 +32,7 @@ describe("Testing Transplanting Report Default Values", () => {
     });
     
     
-
-    it("Checking Button and if the report is not visible.", () => {
-
-    })
-
+    // Aziz Section
     // Checks whether the btn has the right text
     it("Checking if the generate-rpt-btn button has 'Generate Report' text", () => {
         cy.get('[data-cy=generate-rpt-btn]')
@@ -44,8 +40,8 @@ describe("Testing Transplanting Report Default Values", () => {
     })
 
     
-    // Checks whether the the report is visible
-    it("Check if the error remainder is not visible", () => {
-        cy.get('[data-cy=report-remainder]').should('not.be.visible')
+    // Checks whether the the report is exist
+    it("Check if the error remainder is not exist", () => {
+        cy.get('[data-cy=report-remainder]').should('not.exist')
     })
 })
