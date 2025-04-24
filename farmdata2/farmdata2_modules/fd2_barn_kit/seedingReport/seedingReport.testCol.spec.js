@@ -50,10 +50,10 @@ describe("Testing Transplanting Report Default Values", () => {
     it("Check if the columns values are correct when Direct Seedings is selected", () => {
         //Select "Direct Seedings" from the seeding type dropdown
         cy.get('[data-cy="seeding-type-dropdown"] > [data-cy="dropdown-input"]')
+            .select("Direct Seedings")
         
         // Verify the visible columns
         const expectedColumns = [
-            'Select',
             'Date',
             'Crop',
             'Area',
@@ -89,8 +89,9 @@ describe("Testing Transplanting Report Default Values", () => {
 
     // Aziz section
     it("Check if the columns values are correct when Tray Seeding is selected", () => {
-        cy.get('[data-cy="seeding-type-dropdown"] > [data-cy="dropdown-input"] > [data-cy="option1"]').click()
-        
+        cy.get('[data-cy="seeding-type-dropdown"] > [data-cy="dropdown-input"]')
+            .select("Tray Seedings")
+
         const expectedColumns = [
             'Date',
             'Crop',
