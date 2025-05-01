@@ -25,6 +25,9 @@ describe("Test for BarnKit Sub-Tabs", () => {
 
     // Aziz Section
     it("The number of sub-tabs are correct", () => {
+        const expectedTabs = ['Info', 'Seeding Report', 'Transplanting Report'];
         
+        cy.get('ul.tabs--secondary.pagination li a')
+        .should('have.length', expectedTabs.length);
     })
 })
