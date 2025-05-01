@@ -13,6 +13,7 @@ describe("Test for BarnKit Sub-Tabs", () => {
     })
     // Aziz Section
     it("The number of sub-tabs are correct", () => {
-        
+        cy.get('ul.tabs--secondary.pagination li a')
+          .should('have.length', 3);
     })
 })
