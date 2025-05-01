@@ -7,7 +7,9 @@ describe("Test for BarnKit Sub-Tabs", () => {
 
     // Adacus Section
     it("The BarnKit tab contains sub-tabs", () => {
-
+        cy.get('ul.tabs--secondary.pagination li a').contains('Info').should('be.visible')
+        cy.get('ul.tabs--secondary.pagination li a').contains('Seeding Report').should('be.visible')
+        cy.get('ul.tabs--secondary.pagination li a').contains('Transplanting Report').should('be.visible')
     }) 
 
     // Brian Section
